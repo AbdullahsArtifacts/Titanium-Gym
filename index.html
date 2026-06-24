@@ -54,8 +54,8 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;align-items:
 /* CHECKERBOARD HERO */
 .hero-inner{position:relative;z-index:2;max-width:900px;}
 .hero-checker{overflow:hidden;}
-.hero-checker-row{display:flex;flex-wrap:wrap;}
-.hero-char{display:inline-block;font-family:var(--font-head);font-size:clamp(4rem,9vw,8.5rem);line-height:.95;text-transform:uppercase;color:var(--white);will-change:transform,opacity;}
+.hero-checker-row{display:flex;flex-wrap:nowrap;white-space:nowrap;}
+.hero-char{display:inline-block;font-family:var(--font-head);font-size:clamp(2.8rem,6.5vw,7rem);line-height:.95;text-transform:uppercase;color:var(--white);will-change:transform,opacity;}
 .hero-char.yellow{color:var(--yellow);}
 .hero-char.space{width:.3em;}
 .hero-eyebrow{font-size:.72rem;letter-spacing:.4em;text-transform:uppercase;color:var(--yellow);margin-bottom:1.5rem;opacity:0;}
@@ -429,20 +429,20 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;align-items:
         <div class="form-row">
           <div class="form-field">
             <label>First Name</label>
-            <input type="text" placeholder="Kane">
+            <input type="text" name="first_name" placeholder="Kane" required>
           </div>
           <div class="form-field">
             <label>Last Name</label>
-            <input type="text" placeholder="Ryder">
+            <input type="text" name="last_name" placeholder="Ryder" required>
           </div>
         </div>
         <div class="form-field">
           <label>Email</label>
-          <input type="email" placeholder="you@domain.com">
+          <input type="email" name="email" placeholder="you@domain.com" required>
         </div>
         <div class="form-field">
           <label>Interest</label>
-          <select>
+          <select name="interest">
             <option value="">Select a plan or enquiry</option>
             <option>Starter Membership</option>
             <option>Elite Membership</option>
@@ -454,9 +454,9 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;align-items:
         </div>
         <div class="form-field">
           <label>Message</label>
-          <textarea placeholder="Tell us what you're looking for..."></textarea>
+          <textarea name="message" placeholder="Tell us what you're looking for..."></textarea>
         </div>
-        <button class="form-submit mag-btn">Send Message →</button>
+        <button type="submit" class="form-submit mag-btn">Send Message →</button>
       </form>
     </div>
   </div>
